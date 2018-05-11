@@ -8,7 +8,7 @@ Get-Mailbox -ResultSize Unlimited |
 
 Get-MailboxStatistics |
 
-Select DisplayName, `
+Select-Object DisplayName, `
 
 @{name="TotalItemSize (MB)"; expression={[math]::Round( `
 
@@ -16,4 +16,4 @@ Select DisplayName, `
 
 ItemCount |
 
-Sort "TotalItemSize (MB)" -Descending
+Sort-Object "TotalItemSize (MB)" -Descending
